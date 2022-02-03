@@ -19,7 +19,7 @@ Lets **oversimplify** this. You have a **frontend** and a **backend**. Where doe
 
 ## Frontend
 
-Here is a typical use case. You have an app (or are building one) and you want users to claim an nft. You have everything set up and just want that button. In this case you integrate our sdk in the frontend. The user triggers a transaction and the frontend(or client side) interacts with the blockchain.
+Here is a typical use case. You have an app (or are building one) and you want users to claim an nft. You have everything set up and just want that button. In this case, you integrate our sdk in the frontend. The user triggers a transaction and the frontend(or client side) interacts with the blockchain.
 
 Example: I click on the `claim` button and the client side makes sure my wallet pops up and I authorise the transaction.
 
@@ -27,7 +27,7 @@ The SDK is created (instantiated) and uses the `provider` for all the necessary 
 
 ### Code to instantiate the SDK at the Client Side (frontend)
 
-To use the SDK in your frontend, first make sure you make use of the thirdweb component to connect your wallet to your app. If you want to know more about our `Connect Wallet` component, click [here](/portal/guides/add-connectwallet-to-your-website).
+To use the SDK in your frontend, first, make sure you make use of the thirdweb component to connect your wallet to your app. If you want to know more about our `Connect Wallet` component, click [here](/portal/guides/add-connectwallet-to-your-website).
 
 ```tsx
 import { ConnectWallet } from "@3rdweb/react";
@@ -78,7 +78,7 @@ import MarketPlace from "./components/MarketPlace";
 
 // define the chains that your app can support.
 // every chain like polygon(137) or rinkeby(4) has an ID
-// If you want add other chains, search for their IDs and add them to the array below
+// If you want to add other chains, search for their IDs and add them to the array below
 const supportedChainIds = [4, 137];
 
 // define which wallets will be supported by your app
@@ -113,11 +113,11 @@ export default function App() {
 
 ## Backend
 
-If you have read functionalities that you want to integrate in your app or less frequent writing needs, server side is your choice.
+If you have read functionalities that you want to integrate into your app or less frequent writing needs, the server-side is your choice.
 
 Methods like `GetAllListing` that well....get all your listings are much more suited to live server side and computed over there.
 
-An example where you write are your rules on claiming an NFT. Perhaps you got some conditions an user needs to comply. This code is suited for your backend.
+An example where you write is your rules on claiming an NFT. Perhaps you got some conditions an user needs to comply with. This code is suited for your backend.
 
 If you want an example of a guide that shows you how to use the sdk on the backend, check out [this](/guides/create-a-drop-with-typescript-sdk) guide.
 
@@ -125,7 +125,7 @@ If you want an example of a guide that shows you how to use the sdk on the backe
 
 If we just want to read out some data, we don’t need to pass our **private keys**. We can use the below setup to read out data on the blockchain, which can be useful if you want to get all the listings on your marketplace. Regardless of whether the user will be connected to your app, the listings and images will still show.
 
-This is how to instantiate the `sdk`, when all you want is to read data.
+This is how to instantiate the `sdk` when all you want is to read data.
 
 ```tsx
 const ethers = require("ethers");
@@ -139,9 +139,9 @@ const provider = ethers.getDefaultProvider(rpcUrl);
 const sdk = new ThirdwebSDK(provider);
 ```
 
-### Writing:Code to instantiate the SDK at the server-side(back-end)
+### Writing: Code to instantiate the SDK at the server-side(back-end)
 
-To use the SDK at the server side, the object `sdk` is instantiated different. It makes use of the **private keys** of a wallet. You can import the private keys, using the **dotenv** library. In the same folder you would need a `.env` file to store the private keys.
+To use the SDK at the server-side, the object `sdk` is instantiated differently. It makes use of the **private keys** of a wallet. You can import the private keys, using the **dotenv** library. In the same folder, you would need a `.env` file to store the private keys.
 
 ```bash:.env
 PRIVATE_KEY=<your-private-key-here>
@@ -149,7 +149,7 @@ PRIVATE_KEY=<your-private-key-here>
 
 Don't commit this `PRIVATE_KEY` to GitHub(in other words, include `.env` in gitignore) or anywhere else.
 
-Your `index.ts` looks like this, when you instantiate the `sdk` with **private keys**.
+Your `index.ts` looks like this when you instantiate the `sdk` with **private keys**.
 
 ```tsx
 // Importing libraries
