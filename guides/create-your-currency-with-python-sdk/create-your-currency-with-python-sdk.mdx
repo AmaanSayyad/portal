@@ -7,7 +7,7 @@ authorTwitter: "https://twitter.com/PrasoonPratham"
 authorTwitter2: "https://twitter.com/razacodes"
 draft: false
 tags: [token, currency, python, sdk]
-summary: "In this guide we will create tokens that can be used as your own currency with the thirdweb Python SDK"
+summary: "In this guide, we will create tokens that can be used as your own currency with the thirdweb Python SDK"
 image: "./thumbnail.png"
 date: "2021-11-20"
 updated: ""
@@ -33,7 +33,7 @@ Go ahead and create a new Python file. Let's call it `currency.py` and open it i
 
 ![](./17_python_file.png)
 
-Next up use the following code in your terminal to create a virtual environment and install the ThirdWeb SDK!
+Next, up use the following code in your terminal to create a virtual environment and install the ThirdWeb SDK!
 
 ### Virtual-env
 
@@ -54,7 +54,7 @@ pip install thirdweb-sdk
 #create a virtual environment
 conda create -n "thirdweb" python=3.9
 
-#activate virtual environment
+#activate the virtual environment
 conda activate thirdweb
 
 #install the thirdweb sdk
@@ -80,7 +80,7 @@ import os
 
 Over here we need to enter the network that we will use. If you don't know what the URL of your network looks like, take a look over [here](https://chainlist.org/).
 
-To start using the SDK, we will create object inheriting all the methods inside the SDK.
+To start using the SDK, we will create an object inheriting all the methods inside the SDK.
 
 ```python:currency.py
 #choose your network
@@ -115,7 +115,7 @@ sdk.set_private_key("PKEY")
 
 Now we need to define which module we want to use. This is the module we just created inside our project **Making your own currency**. We called the module **Raza Coin**. This module has an address. We need to pass the address here. You can find the address here, under **Raza Coin**:
 
-In our `currency.py` we include the following code. First we define a variable **currency_smart_contract_address** and store our module address in here.
+In our `currency.py` we include the following code. First, we define a variable **currency_smart_contract_address** and store our module address here.
 
 Then we create an object that uses the token module inside the SDK with our address.
 
