@@ -31,7 +31,7 @@ npm install @3rdweb/sdk @3rdweb/react @3rdweb/hooks ethers
 
 ## The App.js - Connect your wallet
 
-In your `App.jsx` file we can use the code from [this](https://thirdweb.com/portal/guides/add-connectwallet-to-your-website) guide for our `connect wallet` button. thirdweb created a **component** for the `connect wallet` button so we don't have to code it ourself. This is great so we don't have to mess around with private keys later.
+In your `App.jsx` file we can use the code from [this](https://thirdweb.com/portal/guides/add-connectwallet-to-your-website) guide for our `connect wallet` button. thirdweb created a **component** for the `connect wallet` button so we don't have to code it ourselves. This is great so we don't have to mess around with private keys later.
 
 Inside our app we import our **component** for the `claim` button.
 
@@ -73,11 +73,11 @@ You can learn more about the walletconnect options on their official docs [here]
 
 ## The AuctionListing.js - The Buy button
 
-In your `AuctionListing.js` file we will write the code for the button.
+In your `AuctionListing.js` file, we will write the code for the button.
 
-Let's take it step by step, but feel free to scroll to the bottom to copy the full piece of code.
+Let's take it to step by step, but feel free to scroll to the bottom to copy the full piece of code.
 
-First we import all the necessary dependencies.
+First, we import all the necessary dependencies.
 The hooks and sdk should be familiar :).
 
 ```js:AuctionListing.jsx
@@ -87,8 +87,8 @@ import { ethers } from "ethers";
 import React from "react";
 ```
 
-In this guide we will **not** be passing the private keys manually. This is not considered best practice and is actually a security issue when applied on the client side.
-Instead we will make use of `provider`, which we pull when a wallet is connected via the `Connect Wallet` component.
+In this guide, we will **not** be passing the private keys manually. This is not considered best practice and is actually a security issue when applied on the client-side.
+Instead, we will make use of `provider`, which we pull when a wallet is connected via the `Connect Wallet` component.
 
 The cool thing about this **component**, is that it's using the `connect wallet` component to authorise the transaction 😄.
 
@@ -122,8 +122,8 @@ Next up we instantiate the sdk, marketplace module and create variables with our
     "0x0d5fb8942eEa62093944F3e91C6Ac4e584336741";
 ```
 
-This part is a bit big, but it doenst make sense to split it up.
-First we declare some variables that will be passed through a form such as, tokend Id's, listings Id's and the amounts.
+This part is a bit big, but it doesn't make sense to split it up.
+First we declare some variables that will be passed through a form such as tokens Id's, listings Id's and the amounts.
 Then we use the variables in our function.
 
 A couple of notes.
@@ -190,7 +190,7 @@ The `createAuctionListing` method takes two **prices** as input.
 
 ```
 
-Finally render out the forms :).
+Finally, render out the forms :).
 
 ```js:AuctionListing.jsx
 
