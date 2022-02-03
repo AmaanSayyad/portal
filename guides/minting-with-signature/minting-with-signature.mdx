@@ -13,13 +13,13 @@ updated: ""
 
 ## Intro
 
-Our latest feature allows you to create unique ID’s to hand out to anyone you want. Only users with that code will be able to mint or claim an unique NFT! thirdweb has created an easy component for you to integrate in your app! Let’s take a look. Also you can find a GitHub repo [here](https://github.com/nftlabs/examples/tree/main/typescript/signature-based-minting), where we show how to use this code.
+Our latest feature allows you to create unique ID’s to hand out to anyone you want. Only users with that code will be able to mint or claim a unique NFT! thirdweb has created an easy component for you to integrate into your app! Let’s take a look. Also, you can find a GitHub repo [here](https://github.com/nftlabs/examples/tree/main/typescript/signature-based-minting), where we show how to use this code.
 
-Sidenote: in this tutorial we will allow an user, who has a unique signature, to mint an NFT. So the actual minting happens once the user uses their unique signature.
+Side note: in this tutorial we will allow a user, who has a unique signature, to mint an NFT. So the actual minting happens once the user uses their unique signature.
 
 ## Requirements
 
-Before we start make sure you have the dependencies installed and understand how we instantiate the sdk. If you want to understand how to do that, click here! Also we’re going to show you how to set this up in a basic **next** app. Click [here](https://nextjs.org/docs/api-reference/create-next-app) if you want to know how to set that up.
+Before we start make sure you have the dependencies installed and understand how we instantiate the sdk. If you want to understand how to do that, click here! Also, we’re going to show you how to set this up in a basic **next** app. Click [here](https://nextjs.org/docs/api-reference/create-next-app) if you want to know how to set that up.
 
 ## What we’re going to do
 
@@ -31,7 +31,7 @@ After instantiating the `sdk`, we’re going to:
 
 ## 1. Setup the SDK & Navigation
 
-In this example project, we’re going to create a `hook` for our **sdk**. Create a folder in your project directory called `hook` and create a file in it called `useSdk.ts` and use the following code. The `provider` contains the necessary data from our wallet to authorise transactions from our app. If you want to know more about how the **sdk** and `provider` works, click here.
+In this example project, we’re going to create a `hook` for our **sdk**. Create a folder in your project directory called `hook` and create a file in it called `useSdk.ts` and use the following code. The `provider` contains the necessary data from our wallet to authorise transactions from our app. If you want to know more about how the **sdk** and `provider` work, click here.
 
 ```tsx:useSDK.tsx
 import { useWeb3 } from "@3rdweb/hooks";
@@ -167,7 +167,7 @@ export default function LandingPage() {
 
 ## 5. The ‘Creator’ page
 
-On this page we create the signature and the payload. We need both the signature and payload to mint an exclusive NFT.
+On this page, we create the signature and the payload. We need both the signature and payload to mint an exclusive NFT.
 
 This page sets the metadata for the nft and creates a payload and signature.
 
@@ -195,7 +195,7 @@ export default function Creator() {
   const sdk = useSdk();
   const toast = useToast();
 
-  // remember in this example we're creating a signature for the user to mint a NFT
+  // remember in this example we're creating a signature for the user to mint an NFT
   const module = useMemo(
     () => sdk.getNFTModule("0xc335111d58913C6A382F40c8B020b4ff1ee13Ba1"),
     [sdk],
@@ -218,7 +218,7 @@ export default function Creator() {
   }
   `);
 
-  // this function checks if the metadata has any syntax error
+  // This function checks if the metadata has any syntax error
 
   const generateSignature = useCallback(async () => {
     let metadataJson: any;
@@ -403,8 +403,8 @@ export default function Claimer() {
 
 ## That’s it!
 
-Anyone passing the **payload** and **signature** can mint an unique NFT!
+Anyone passing the **payload** and **signature** can mint a unique NFT!
 
 This is what it looks like 👇
 
-[A demo of minting an NFT using an unique signature](./demo.mov)
+[A demo of minting an NFT using a unique signature](./demo.mov)
