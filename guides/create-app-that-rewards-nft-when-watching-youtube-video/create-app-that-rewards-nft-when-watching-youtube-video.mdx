@@ -13,7 +13,7 @@ updated: "2021-12-18"
 
 Most of us learn on the internet. We spend hours watching youtube videos and reading long articles to learn about new skills. Unlike educational institutions, we don't get certificates for learning on the internet. Eg: I've learnt how to write **Solidity** on YouTube, but _there's no way_ I can prove I've watched a **Solidity** course on YouTube to someone else.
 
-This application will create '**Proof of viewership**' NFTs which are rewarded for completing YouTube videos, and can therefore be used to represent completion of educational video courses.
+This application will create '**Proof of viewership**' NFTs which are rewarded for completing YouTube videos, and can therefore be used to represent the completion of educational video courses.
 
 ![](./video-end.png)
 
@@ -31,13 +31,13 @@ Once you created your module, you'll reach the following page:
 
 ![](./dashboard.png)
 
-You won't need to add any NFTs at this stage as we'll be minting the NFTs programatically.
+You won't need to add any NFTs at this stage as we'll be minting the NFTs programmatically.
 
 ## #3 Set up your React Frontend
 
 I'll be using React for the frontend of our app, you can use anything you're comfortable with.
 
-The objective of the frontend is to help the user watch a youtube video, verify if they've seen it fully and then issue a command to the backend to mint a NFT for the user.
+The objective of the frontend is to help the user watch a youtube video, verify if they've seen it fully and then issue a command to the backend to mint an NFT for the user.
 
 <aside>
 🗒️ Note - Thirdweb also has a Typescript SDK which you can directly use to mint NFTs on the frontend itself. I'm just going to use a different Python backend because it makes the app modular and you can use the Python code to mint NFTs in any other app you make as well!
@@ -250,8 +250,8 @@ Then, initialise the SDK using the helper functions provided. The code should lo
 # The polygon-rpc.com is the official Polygon Mainnet RPC
 sdk = ThirdwebSdk(SdkOptions(), "https://polygon-rpc.com")
 
-# You'll need wallet's private key here, you can find them in your wallet.
-# WARNING: Never share this with anyone, it gives permission to use your wallet in your behalf
+# You'll need your wallet's private key here, you can find them in your wallet.
+# WARNING: Never share this with anyone, it permits to use your wallet on your behalf
 sdk.set_private_key("your private key")
 ```
 
@@ -343,7 +343,7 @@ print("your file url", blob.public_url)
 
 Again, I've done most of the heavy-lifting here to write all the code. The above code snippet writes `text` and `text2` on top of `img.png` which is a simple grey background image I found on the internet. It also takes the datestamp of the time you run this code and adds that to the text written on the image. That way, you know when the image and subsequently the NFT was created. It then puts the edited image on Firebase and gets back a URL to access the image. You'll have to setup a Firebase project and get your JSON keys + bucket name from there for this to work. Checkout these [docs](https://firebase.google.com/docs/reference/admin/python) for more information.
 
-Now let's make a quick [FastAPI](https://fastapi.tiangolo.com/) wrapper that takes all data from frontend, uses all the code we wrote above and mints a NFT.
+Now let's make a quick [FastAPI](https://fastapi.tiangolo.com/) wrapper that takes all data from frontend, uses all the code we wrote above and mints an NFT.
 
 ```python
 from thirdweb import ThirdwebSdk, SdkOptions, MintArg
@@ -440,6 +440,7 @@ if __name__ == "__main__":
 
 Note - Once our NFT image is prepared, I convert the locally saved image to a base64 string that is passed to the frontend. The frontend renders that string in an IMG tag and shows the user how their NFT looks.
 
-You can take this Python code snippet, replace it with your credentials and then run it anywhere. I recommend Replit's always-on feature to host this API while you're testing because it's super easy to debug if something goes wrong. After running this API, you can make an actual query from the frontend with your address after watching a video and you'll be able to see a NFT getting minted. In a couple minutes after minting, your NFT will also be available on [Opensea](https://opensea.io) under your wallet.
+You can take this Python code snippet, replace it with your credentials and then run it anywhere. I recommend Replit's always-on feature to host this API while you're testing because it's super easy to debug if something goes wrong. After running this API, you can make an actual query from the frontend with your address after watching a video and you'll be able to see an NFT getting minted. In a couple minutes after minting, your NFT will also be available on [Opensea](https://opensea.io) under your wallet.
 
 Hope you enjoyed building this! Web3 is just getting started and thirdweb is building the underlying infrastructure to help make web3 mainstream. Let me know if you have any questions on Twitter [@aryxnsharma](https://twitter.com/aryxnsharma)!
+Grammatical Mistakes Rectified
