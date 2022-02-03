@@ -13,11 +13,11 @@ updated: "2021-11-16"
 
 ## Get started by creating NFT contract
 
-1. Go to [https://thirdweb.com/dashboard](https://thirdweb.com/dashboard), connect your wallet and select the network you want to deploy to: Mainnet, Polygon, Fantom, Avalanche, Testnet.
-2. Create new Project (if you don't have one)
+1. Go to [https://thirdweb.com/dashboard](https://thirdweb.com/dashboard), connect your wallet and select the network you want to deploy to Mainnet, Polygon, Fantom, Avalanche, Testnet.
+2. Create a new Project (if you don't have one)
 3. Add a NFT Collection module. `NFT Collection (ERC 721)`.
 4. Enter a name and description for your **NFT Collection** - this will be displayed when users view the collection page on OpenSea.
-5. Click Deploy → confirm both steps in your wallet.
+5. Click Deploy → to confirm both steps in your wallet.
 6. Click to copy the **Contract Address** at the top left of the page.
 
 ## Time to make the magic happen
@@ -34,7 +34,7 @@ npm install @3rdweb/sdk ethers
 npm install @usedapp/core
 ```
 
-### 3. (Client side) React components to render list of NFTs using Client SDK and a Mint button.
+### 3. (Client-side) React components to render list of NFTs using Client SDK and a Mint button.
 
 ```jsx
 import { useEffect, useState } from "react";
@@ -86,7 +86,7 @@ const MintButton = () => {
 };
 ```
 
-### 4. (Server side) A HTTP Server to mint NFT using Admin SDK.
+### 4. (Server-side) A HTTP Server to mint NFT using Admin SDK.
 
 ```jsx:pages/api/mint.ts
 import { ThirdwebSDK } from "@3rdweb/sdk";
@@ -101,7 +101,7 @@ export default function mint(req: NextApiRequest, res: NextApiResponse): Promise
   // "https://rpc-mumbai.maticvigil.com" = mumbai testnet.
   const rpcUrl = "rinkeby";
 
-  // setup a wallet using private key for the SDK.
+  //set up a wallet using the private key for the SDK.
   // the wallet must have MINTER role to mint the NFT.
   // you can assign MINTER role to the wallet through the NFT collection dashboard.
   const wallet = new ethers.Wallet(
