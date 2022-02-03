@@ -15,9 +15,9 @@ updated: ""
 
 ## Intro
 
-In this guide we'll create our own **marketplace** with the TypeScript SDK! In a **marketplace** you can list your tokens, like NFT's, for sale. Opensea is an example of a **marketplace**. Did you know you can do both! After we create our **marketplace**, we will list the NFT we minted with our sdk in our previous guide. Check that guide out over [here](/portal/guides/mint-nft-collection-using-typescript-sdk).
+In this guide, we'll create our own **marketplace** with the TypeScript SDK! In a **marketplace** you can list your tokens, like NFT's, for sale. Opensea is an example of a **marketplace**. Did you know you can do both! After we create our **marketplace**, we will list the NFT we minted with our sdk in our previous guide. Check that guide out over [here](/portal/guides/mint-nft-collection-using-typescript-sdk).
 
-By the way we also need to connect a wallet. So if you don't have a wallet, make sure to sign up with MetaMask or CoinWallet. If don't have a wallet, [you can follow this guide to create one](/portal/guides/create-a-metamask-wallet).
+By the way, we also need to connect a wallet. So if you don't have a wallet, make sure to sign up with MetaMask or CoinWallet. If don't have a wallet, [you can follow this guide to create one](/portal/guides/create-a-metamask-wallet).
 
 Alright without further ado, let's create our **marketplace**!
 
@@ -35,11 +35,11 @@ Once you've created the module, it's time to list our first NFT, but we don't ne
 
 ### 1. Create a TypeScript file
 
-Go ahead and create a new TypeScript file. Let's call it `index.ts` and open it in your favorite code editor. We'll use Visual Studio code.
+Go ahead and create a new TypeScript file. Let's call it `index.ts` and open it in your favourite code editor. We'll use Visual Studio Code.
 
 ![](./19-jsfile.png)
 
-Next up use we'll install the ThirdWeb SDK using npm!
+Next up use, we'll install the ThirdWeb SDK using npm!
 
 ### 2. SDK installation and setup with TypeScript
 
@@ -78,7 +78,7 @@ require('dotenv').config()
 
 Over here we need to enter the network that we will use. If you don't know what the URL of your network looks like, take a look over [here](https://chainlist.org/).
 
-To start using the sdk, we will create object inheriting all the methods inside the sdk.
+To start using the sdk, we will create an object inheriting all the methods inside the sdk.
 
 ```tsx:index.ts
 //Instantiate 3rdweb SDK
@@ -99,13 +99,13 @@ Now we need to define which module we want to use. This is the module we just cr
 
 ![](./20-module.png)
 
-In our `index.ts` file we include the following code. First we define a variable `marketModuleAddress` and store our module address in here.
+In our `index.ts` file we include the following code. First, we define a variable `marketModuleAddress` and store our module address here.
 
 Then we create an object that uses the market module inside the SDK with our address.
 
 We will also need the module address of the NFT we want to list. To get your NFT module address head over to the dashboard. Inside your project go to your `NFT Collection` module and copy the address of that module.
 
-If you want to sell your NFT in your own coins, you will also need the module address of your coins. Head over to the dasboard and inside your project go to your `Token` module and copy the address of that module and paste it below.
+If you want to sell your NFT in your own coins, you will also need the module address of your coins. Head over to the dashboard and inside your project go to your `Token` module and copy the address of that module and paste it below.
 
 You can also use the native currency of the chain, such as Ether on Ethereum and Matic on Polygon.
 You will need the token address of the coin you want to use and pass it to the variable `tokenModuleAddress`.
@@ -125,7 +125,7 @@ const tokenModuleAddress = "0x0d5fb8942eEa62093944F3e91C6Ac4e584336741";
 
 ### 6. Time to mint the NFT on the marketplace!
 
-We are using the NFT that we created in our previous guide. Each NFT has `tokenId`. We will pass that the following parameters to the '.list' method:
+We are using the NFT that we created in our previous guide. Each NFT has `tokenId`. We will pass the following parameters to the '.list' method:
 
 ```tsx:index.ts
 // the listingId of the listing you want to fetch data for
