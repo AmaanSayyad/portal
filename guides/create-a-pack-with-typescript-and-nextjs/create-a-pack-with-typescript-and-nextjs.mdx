@@ -183,7 +183,7 @@ That's a basic homepage already. It doesn't let a user do much besides connectin
 
 ### Attention
 
-Usually, you would have to do a little more than only let your users connect their wallets. Whenever your users make API calls, it is better to first verify that they really own a specific wallet and are who they state they are.
+Usually, you would have to do a little more than only let your users connect their wallets. Whenever your users make API calls, it is better to first verify that they really own a specific wallet and are whom they state they are.
 
 Unfortunately, implementing the whole logic to sign in users takes a little more time than we have here. You can, however, [follow our guide on letting your users sign in with their wallet](/portal/guides/sign-in-with-ethereum-using-thirdweb-connectwallet) to also implement this logic.
 
@@ -278,7 +278,7 @@ export const handler = async (
 
 This is a basic Next.js API route handler. If you already know Express, the signature of this function will probably look familiar to you.
 
-In the next step, we will add the logic to create a pack of NFTs, and the module gives you the opportunity to add a logo to it. In our case, we do of course use our own logo, located at `public/thirdweb_logo.png`, but you can add any other image you like. If you currently don't have a suitable image, don't worry, you have permission to use our logo here, of course. Just download it and place it inside your project.
+In the next step, we will add the logic to create a pack of NFTs, and the module allows you to add a logo to it. In our case, we do of course use our own logo, located at `public/thirdweb_logo.png`, but you can add any other image you like. If you currently don't have a suitable image, don't worry, you have permission to use our logo here, of course. Just download it and place it inside your project.
 
 Now, you can finally add the logic necessary to create a pack of NFTs:
 
@@ -330,7 +330,7 @@ The object also has a `metadata` block, which assigns a name and a description t
 
 `assets` is the most important property of the options object. Here you define all NFTs from the `assetsContract` that can potentially land inside a pack. Add in at least the ids of the NFTs you created within your bundle module.
 
-The API creates that pack on demand. And when that is successful, it transfers the pack over to the address the caller sent with their request. After that, the id of the pack and the contract address of the pack module are returned to the user.
+The API creates that pack on demand. And when that is successful, it transfers the pack over to the address the caller sent with their request. After that, the id of the pack and the contract address of the pack module is returned to the user.
 
 Overall, it only takes a few lines of code to create and transfer the pack. This is the power of the thirdweb SDK.
 
@@ -461,7 +461,7 @@ Additionally add the following to `styles/Home.module.css`:
 
 These lines of CSS style the button just enough to give it a neat touch.
 
-What you need next is an onClick handler for the button. Whenever a user clicks that button, you want to invoke your API endpoint and provide them with a pack they can open. After the call returns successfully, the app should show the user what they got. As this is pretty dynamic, you'll need to work with state.
+What you need next is an onClick handler for the button. Whenever a user clicks that button, you want to invoke your API endpoint and provide them with a pack they can open. After the call returns successfully, the app should show the user what they got. As this is pretty dynamic, you'll need to work with the state.
 
 Let's alter the component a little and retrieve the data required to make the API call and to process the result after that. Our hooks library comes with a pre-made hook that allows you to quickly access the address and provider of a user as long as you use our ThirdwebProvider. Gladly, you already added it in the beginning, so it's easy to use the hook. Add the following to your component, above the return statement:
 
