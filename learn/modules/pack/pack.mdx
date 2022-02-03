@@ -16,9 +16,9 @@ The **Pack** component provides a flexible 'lootbox' API. Packs can contain arbi
 
 ## Packs
 
-Packs are designed to work as generic packs that contains items in them, where a pack can be 'opened' to retrieve the items in that pack. Packs like these already exist as e.g. regular [Pokemon card packs](https://www.pokemoncenter.com/category/booster-packs), or in other forms that use blockchain technology, like [NBA Topshot](https://nbatopshot.com/) packs.
+Packs are designed to work as generic packs that contain items in them, where a pack can be 'opened' to retrieve the items in that pack. Packs like these already exist as e.g. regular [Pokemon card packs](https://www.pokemoncenter.com/category/booster-packs), or in other forms that use blockchain technology, like [NBA Topshot](https://nbatopshot.com/) packs.
 
-Packs are [ERC 1155](https://eips.ethereum.org/EIPS/eip-1155#motivation) tokens. Adopting the ERC 1155 token standard for packs allows the protocol to create different kinds of packs, where each kind of pack is individuated by a unique set of underlying items, and has it's own independent supply.
+Packs are [ERC 1155](https://eips.ethereum.org/EIPS/eip-1155#motivation) tokens. Adopting the ERC 1155 token standard for packs allows the protocol to create different kinds of packs, where each kind of pack is individuated by a unique set of underlying items and has its independent supply.
 
 A fixed supply of packs is created when someone creates packs with a set of underlying items. The total amount of packs created is equal to the sum of the amounts of each kind of item it contains. For example, if someone creates packs with three underlying items - packing an amount 5, 15 and 80 of each - a total of 100 packs are created.
 
@@ -67,10 +67,10 @@ Note that given this design, the opener truly has a 5% chance of receiving a **s
 ### Sourcing a random number for item distribution
 
 The protocol uses a new random number each time a pack is opened.
-For the item distribution to be fair and solely based on the rarity of items, the random number used on the opening of a pack must be 'truly random' - neither manipulable by the pack opener, nor knowable to the opener before opening the pack.
+For the item distribution to be fair and solely based on the rarity of items, the random number used on the opening of a pack must be 'truly random' - neither manipulable by the pack opener nor knowable to the opener before opening the pack.
 To this end, the protocol uses [Chainlink VRF (Verifiable Random Function)](https://docs.chain.link/docs/chainlink-vrf/) to source random numbers.
 
-Chainlink VRF is a random number generator that operates on a request ←→ response model, where a smart contract can request a random number from the Chainlink VRF system in one transaction, and the Chainlink VRF system fulfills that request in a subsequent transaction with a random number.
+Chainlink VRF is a random number generator that operates on a request ←→ response model, where a smart contract can request a random number from the Chainlink VRF system in one transaction, and the Chainlink VRF system fulfils that request in a subsequent transaction with a random number.
 
 ![](./pack-final-diagram.png)
 
