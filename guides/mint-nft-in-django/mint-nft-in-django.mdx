@@ -13,7 +13,7 @@ updated: ""
 
 ## Intro
 
-In this guide we'll integrate third web's sdk into a Django app by adding a minting functionality. The beauty of this is that we'll only need Python! OK...and a bit of html. Does that count? Side note, we won't create a django project from scratch, but show how the thirdweb sdk works inside Django. If you get stuck, make sure to drop by our Discord!
+In this guide, we'll integrate third web's sdk into a Django app by adding a minting functionality. The beauty of this is that we'll only need Python! OK...and a bit of html. Does that count? Side note, we won't create a django project from scratch, but show how the thirdweb sdk works inside Django. If you get stuck, make sure to drop by our Discord!
 
 Check out the GitHub repo [here](https://github.com/razacodespython/nft_creator).
 
@@ -81,7 +81,7 @@ import os
 
 Over here we need to enter the network that we will use. If you don't know what the URL of your network looks like, take a look over [here](https://chainlist.org/).
 
-To start using the SDK, we will create object inheriting all the methods inside the SDK.
+To start using the SDK, we will create an object inheriting all the methods inside the SDK.
 
 ```python:nft_network.py
 #choose your network
@@ -116,7 +116,7 @@ sdk.set_private_key('PRIVATE_KEY')
 
 Now we need to define which module we want to use. This is the module we just created inside our project PythonNFT. We called the module **Python**. This module has an address. We need to pass the address here. You can find the address here, under Python:
 
-In our `nft_network.py` we include the following code. First we define a variable `nft_smart_contract_address` and store our module address in here.
+In our `nft_network.py` we include the following code. First, we define a variable `nft_smart_contract_address` and store our module address here.
 
 Then we create an object that uses the Nft Collection module inside the sdk with our address.
 
@@ -163,7 +163,7 @@ def success():
 
 ### 7. Using a HTML form
 
-If you go to the GitHub [repo](https://github.com/razacodespython/nft_creator), you might have noticed that I use a html form instead of a Django form. I did this, because some projects might use Django solely for the backend and html forms at the front. However feel free to use Django forms, the process would be essentially the same!
+If you go to the GitHub [repo](https://github.com/razacodespython/nft_creator), you might have noticed that I use an html form instead of a Django form. I did this because some projects might use Django solely for the backend and html forms at the front. However feel free to use Django forms, the process would be essentially the same!
 
 ### 8. That's it!
 
