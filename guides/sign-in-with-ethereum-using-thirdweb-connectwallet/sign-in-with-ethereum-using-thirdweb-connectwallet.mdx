@@ -17,12 +17,12 @@ updated: ""
 
 Welcome to the **thirdweb Component Library**. This package provides you with extensible components to handle the web3 side of your app.
 
-We simplify the process of integrating web3 into your apps while making sure that you still have all the control you would using other lower level web3 frontend libraries.
+We simplify the process of integrating web3 into your apps while making sure that you still have all the control you would using other lower-level web3 frontend libraries.
 
 Our main features are:
 
 - Support for most commonly used web3 providers including: [MetaMask](https://metamask.io/), [WalletConnect](https://walletconnect.com/), [Coinbase Wallet](https://wallet.coinbase.com/), and [Magic Link](https://magic.link/).
-- An app wide context containing an [ethers.js](https://github.com/ethers-io/ethers.js/) or [web3.js](https://web3js.readthedocs.io/en/v1.5.2/) instance with everything you need to integrate with the blockchain.
+- An app-wide context containing an [ethers.js](https://github.com/ethers-io/ethers.js/) or [web3.js](https://web3js.readthedocs.io/en/v1.5.2/) instance with everything you need to integrate with the blockchain.
 - Easy-to-use plug-and-play components that let you implement complex and fully-featured web3 app setups with only a few lines of code.
 
 ## Get Started
@@ -73,7 +73,7 @@ const App = ({ children }) => {
 
 ## Connect Wallet & Web3 Setup
 
-Currently, we provide you with components and hooks to easily integrate web3 into your app and setup an app wide context without having to deal with the complexity of lower level web3 configuration.
+Currently, we provide you with components and hooks to easily integrate web3 into your app and set up an app-wide context without having to deal with the complexity of lower-level web3 configuration.
 
 There are two main ways to implement wallet connection and web3 integration with the **Thirdweb Component Library**, both of which we will go over below:
 
@@ -98,11 +98,11 @@ For a fully functional setup using our `ConnectWallet` button, you can checkout 
 
 ### Use Custom Hooks to sign with your Wallet
 
-We will build our own custom component that will allow you to authorise any action by **signing** it with your wallet.
+We will build our custom component that will allow you to authorise any action by **signing** it with your wallet.
 
 We will generate a message to be signed by the user. After the message is signed, this will create an encrypted message that the server can validate. Once validated the server will create a JWT, allowing the user to make any change to his/her profile in the database.
 
-In this example we will authorise the adjustment of a username in our database by **signing** using our wallet. In this example we will use a MetaMask wallet. 
+In this example, we will authorise the adjustment of a username in our database by **signing** using our wallet. In this example, we will use a MetaMask wallet. 
 
 Check out this diagram for a visual representation of what we will do
 
@@ -110,7 +110,7 @@ Check out this diagram for a visual representation of what we will do
 
 You can find the GitHub repo over [here](https://github.com/razacodespython/sign-in-with-ethereum).
 
-First lets create our homepage with the `Connect Wallet` component
+First, let's create our homepage with the `Connect Wallet` component
 
 ```jsx:pages/index.js
 import { useWeb3 } from "@3rdweb/hooks";
@@ -129,7 +129,7 @@ export default function Home() {
 }
 ```
 
-Next up lets create our backend that will simulate our database on a server. For this im going to use a docker image which builds a Redis database. Here is the yaml file if you want to do the same:
+Next up let's create our backend that will simulate our database on a server. For this, I'm going to use a docker image that builds a Redis database. Here is the yaml file if you want to do the same:
 
 
 
@@ -154,7 +154,7 @@ Below is the code that builds the database, a basic schema, a function to get th
 //Import the library
 import Redis, { Redis as RedisClient } from "ioredis";
 
-//we're doing everything local, so set the host to 'local host'
+//we're doing everything locally, so set the host to 'local host'
 const REDIS_HOST = "localhost";
 
 interface IDatabase {
@@ -258,7 +258,7 @@ export default async function challenge(
   return res.status(200).json({ challenge });
 ```
 
-Inside our folder `api` create a file `jws.ts`. Now we need to make sure our backend generates  a JWT after we the message has been signed and validated by our back-end. 
+Inside our folder `api` create a file `jws.ts`. Now we need to make sure our backend generates a JWT after the message has been signed and validated by our back-end. 
 
 ```tsx:api/jws.ts
 import { ethers } from "ethers";
@@ -351,7 +351,7 @@ export default async function updateProfile(
 }
 ```
 
-Finally it's time to build our component `Profile.jsx`. Create the `Profile.jsx` inside a new folder called `components`.
+Finally, it's time to build our component `Profile.jsx`. Create the `Profile.jsx` inside a new folder called `components`.
 
 Let's take it step by step. First we create a function to get the message:
 
@@ -509,7 +509,7 @@ if (!jwt) {
   }
 ```
 
-Finally lets add the html tags and include the calls to the functions to get and update the username.
+Finally, let's add the html tags and include the calls to the functions to get and update the username.
 
 ```tsx:components/Profile.jsx
 return (
