@@ -14,13 +14,13 @@ featuredOrder: 1
 
 ## Intro
 
-Hello everyone! In this guide I will walk you step-by-step on how to create your own NFT drop without having to write a single line of code, no Solidity, no JavaScript, nothing.
+Hello everyone! In this guide, I will walk you step-by-step on how to create your own NFT drop without having to write a single line of code, no Solidity, no JavaScript, nothing.
 
 In this example, we'll create an NFT drop where people can claim a unique Pokémon NFT. The same process can be followed for other types of NFTs (audio, video) as well as "one of many" NFTs (e.g multiple copies of the same trading card).
 
 No matter what your use case is, this web3 guide will explain everything step-by-step, no programming knowledge required.
 
-You will notice as you perform many of the steps in this walkthrough, your wallet will prompt you to accept transactions. **thirdweb is not charging you anything**, it's the gas costs of deploying the contracts **from your own address**, so you can own the contracts.
+You will notice as you perform many of the steps in this walkthrough, your wallet will prompt you to accept transactions. **thirdweb is not charging you anything**, it's the gas costs of deploying the contracts **from your address**, so you can own the contracts.
 
 ## Set up a project
 
@@ -53,27 +53,27 @@ So, what does every input do? Let's use [Bored Ape Yacht Club](https://opensea.i
 - **Description**: Description of your collection.
 - **Symbol**: Etherscan symbol (BAYC on Bored Ape Yacht Club)
 - **Primary Sale Recipient Address**: The address that will receive both the money from the primary sales and the royalties.
-- **Royalty**: The % of money you'll get from any secondary sales (For example any time your NFT gets sold on OpenSea after the mint).
+- **Royalty**: The % of the money you'll get from any secondary sales (For example any time your NFT gets sold on OpenSea after the mint).
 
 ### Configure the drop
 
-Next thing we'll do, is configure the drop, these are my settings for this drop:
+The next thing we'll do, configures the drop, these are my settings for this drop:
 
 ![Drop settings](./drop-module-settings.png)
 
-So let's explain what each of these do!
+So let's explain what each of these does!
 
 - **Currency**: The currency you want users to mint the NFT with. You can use any token available on the chain, even your own custom tokens!
 - **Price per token**: How much of that currency it's going to cost (0 is free).
 - **Maximum Mint Supply**: How many NFTs are going to be available for minting, in my case, 152 (A pokeball and 151 Gen 1 Pokémon.)
-- **Waittime (seconds)**: The amount of time people need to wait until they can mint again after they have minted once. (Click "**Max**" if you only want them to mint once).
-- **Claim limit per transaction**: The maximum number of NFTs you want them to be able to claim in one transaction (helps saving money on gas). 
+- **Wait time (seconds)**: The amount of time people need to wait until they can mint again after they have minted once. (Click "**Max**" if you only want them to mint once).
+- **Claim limit per transaction**: The maximum number of NFTs you want them to be able to claim in one transaction (helps save money on gas). 
 
 ### Set permissions
 
-The next screen will allow us to set permissions. Here you can give admin capabilities to other wallets, if you want to do so. I’m going to leave it exactly as is for the moment: 
+The next screen will allow us to set permissions. Here you can give admin capabilities to other wallets if you want to do so. I’m going to leave it exactly as is for the moment: 
 
-![All the permisions you can set](./permissions.png)
+![All the permissions you can set](./permissions.png)
 
 ### Bulk upload
 
@@ -127,7 +127,7 @@ This is the configuration that thirdweb offers:
 
 - **IPFS Gateway**: This is where the embed is hosted. For your own production deployments, we recommend getting your own.
 - **RPC Url**: The RPC Url that is used, you can use Alchemy or Infura here, recommended for production deployments.
-- **Relayer Url**: Provide a relayer url to use for this embed. A relayer can be used to make the transaction gas-less for the end user. [Learn more](/portal/guides/setup-gasless-transactions).
+- **Relayer Url**: Provide a relayer url to use for this embed. A relayer can be used to make the transaction gas-less for the end-user. [Learn more](/portal/guides/setup-gasless-transactions).
 
 Next, at the bottom of the page, you’ll be able to see a preview of how it will appear. Once you claim an NFT, it will show on the inventory tab of the embed!
 
@@ -141,7 +141,7 @@ Next, at the bottom of the page, you’ll be able to see a preview of how it wil
 
 ### Add the embed to your website
 
-For this example, I'm going to use [Carrd](https://carrd.co/), but you can use the embed on any page that accepts HTML (Webflow, Bubble, Wordpress, etc.)
+For this example, I'm going to use [Carrd](https://carrd.co/), but you can use the embed on any page that accepts HTML (Webflow, Bubble, WordPress, etc.)
 
 Carrd specifically needs a premium version to be able to add embeds, but remember you can add this HTML code to any HTML page for free.
 
@@ -170,10 +170,10 @@ You are finished! You have done a lot, let's recap:
 - You have created your own website.
 - You have added an embed so people can mint your drop!
   
-You're now a blockchain expert! If you want to go ahead and mint some Pokémon from my site, here's [the link](https://pokemongen1.carrd.co/). Remember there's only 151 available!
+You're now a blockchain expert! If you want to go ahead and mint some Pokémon from my site, here's [the link](https://pokemongen1.carrd.co/). Remember there are only 151 available!
 
 Also, if you want to check this collection on OpenSea, you can do it [here](https://testnets.opensea.io/collection/pokmon-gen-1).
 
-I hope you have enjoyed this guide, if you create your own collection with this, please send it to me on [Discord](https://discord.gg/thirdweb) or on Twitter [@nachoiacovino](https://twitter.com/nachoiacovino).
+I hope you have enjoyed this guide, if you create your own collection with this, please send it to me on [Discord](https://discord.gg/thirdweb) or Twitter [@nachoiacovino](https://twitter.com/nachoiacovino).
 
-See you on the next one!
+See you at the next one!
